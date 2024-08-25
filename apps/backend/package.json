@@ -24,5 +24,7 @@
     "typescript-eslint": "8.0.1"
   },
   "module": "src/index.js",
-  "types": "src/index.js"
+  "exports": {
+    "./server": "./src/index.ts"
+  }
 }

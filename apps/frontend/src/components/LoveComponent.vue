@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { treaty } from "@elysiajs/eden";
-import type { Application } from "backend";
+import type { Application } from "backend/server";
 
 const app = treaty<Application>(import.meta.env.VITE_BACKEND_BASE_URL);
 
