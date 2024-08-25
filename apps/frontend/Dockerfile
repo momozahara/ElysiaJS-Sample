@@ -10,7 +10,7 @@ ARG VITE_BACKEND_BASE_URL
 ENV VITE_BACKEND_BASE_URL=$VITE_BACKEND_BASE_URL
 COPY . .
 COPY --from=deps /app/node_modules ./apps/frontend/node_modules
-RUN bun run build --filter=frontend
+RUN cd ./apps/frontend && bun run build
 
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
