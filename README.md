@@ -21,3 +21,25 @@ frontend
 ```bash
 VITE_BACKEND_BASE_URL= http://localhost:8888 # example
 ```
+
+### My thoughts on ElysiaJS
+
+on my opinion elysia have one problem that is its required your structure to be in `Method Chaining` styles in order to make [@elysiajs/eden](https://github.com/elysiajs/eden) to works, Its just that I prefer using `Sequential Method Calls` styles
+
+Method Chaining
+```typescript
+const app = new Elysia()
+  .use(swagger())
+  .use(cors())
+  .get("/", () => ...)
+  .listen(8888);
+```
+
+Sequential Method Calls
+```typescript
+const app = new Elysia();
+app.use(swagger());
+app.use(cors());
+app.get("/", () => ...);
+app.listen(8888);
+```
