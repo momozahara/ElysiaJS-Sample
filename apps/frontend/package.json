@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@elysiajs/eden": "^1.1.2",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vue-tsc": "^2.0.29"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "1.8.0",
@@ -22,7 +23,6 @@
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-vue": "9.23.0",
     "typescript": "5.3.3",
-    "vite": "^5.4.1",
-    "vue-tsc": "^2.0.29"
+    "vite": "^5.4.1"
   }
 }
