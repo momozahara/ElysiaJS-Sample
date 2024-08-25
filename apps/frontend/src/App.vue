@@ -9,7 +9,6 @@ const LoveComponent = defineAsyncComponent(
 <template>
   <main>
     <div id="container">
-      <h1>Random "Love" Quotes</h1>
       <Suspense>
         <component :is="LoveComponent" />
         <template #fallback>Loading...</template>
@@ -29,6 +28,6 @@ main {
 
 #container {
   margin: 0 1rem;
-  max-width: 600px;
+  max-width: 800px;
 }
 </style>

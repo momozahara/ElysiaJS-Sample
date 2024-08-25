@@ -9,7 +9,7 @@ const apiLove = await app.api.love.get();
 
 <template>
   <p>
-    <span class="qoute">{{ apiLove.data.quote }}</span>
+    <span class="quote">{{ apiLove.data.quote }}</span>
     <span class="sperator" />
     <span class="author">- {{ apiLove.data.author }}</span>
   </p>
@@ -19,6 +19,10 @@ const apiLove = await app.api.love.get();
 .sperator {
   display: block;
   height: 1rem;
+}
+
+.quote {
+  font-size: 1.25rem;
 }
 
 .author {
