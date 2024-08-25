@@ -24,7 +24,7 @@ VITE_BACKEND_BASE_URL= http://localhost:8888 # example
 
 ### My thoughts on ElysiaJS
 
-on my opinion elysia have one problem that is its required your structure to be in `Method Chaining` styles in order to make [@elysiajs/eden](https://github.com/elysiajs/eden) to works, Its just that I prefer using `Sequential Method Calls` styles
+on my opinion elysia have one problem that is its required your structure to be in `Method Chaining` styles in order to make lsp working with [@elysiajs/eden](https://github.com/elysiajs/eden) to works, Its just that I prefer using `Sequential Method Calls` styles
 
 Method Chaining
 ```typescript
