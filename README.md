@@ -8,7 +8,7 @@ this project will get random quotes from [API NINJAS](https://api-ninjas.com) an
 
 #### Setup
 
-to run this project you are required to set the following environment for each project inside [apps](/apps) apps folder then run command `bun run dev`  `pnpm run dev` or whatever you are using then visit `http://localhost:3000`
+to run this project you are required to set the following environment for each project inside [apps](/apps) folder then run command `bun run dev`  `pnpm run dev` or whatever you are using then visit `http://localhost:3000`
 
 backend
 ```bash
