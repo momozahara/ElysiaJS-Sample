@@ -12,6 +12,9 @@ const envSchema = Type.Object({
   PORT: Type.Number({
     default: 8888,
   }),
+  CACHE_TTL: Type.Number({
+    default: 1,
+  }),
 });
 
 const env = Value.Parse(envSchema, process.env);

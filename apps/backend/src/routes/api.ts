@@ -14,7 +14,7 @@ const app = new Elysia({
     let item = await api.love.get();
     if (
       item !== null &&
-      dayjs().diff(dayjs(item.createAt), "minute", true) > 1
+      dayjs().diff(dayjs(item.createAt), "minute", true) > env.CACHE_TTL
     ) {
       item = null;
     }
