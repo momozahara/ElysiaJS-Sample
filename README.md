@@ -15,7 +15,7 @@ backend
 NINJAS_API_KEY= # your api_key from api ninjas
 NODE_ENV= development | production # optional set to production will disabled swagger
 PORT= 8888 # optional
-CACHE_TTL= 1 # optional
+CACHE_TTL= 1 # optional minutes
 ```
 
 frontend
