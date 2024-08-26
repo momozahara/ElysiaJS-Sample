@@ -3,19 +3,15 @@ import Elysia, { Static } from "elysia";
 import dayjs from "dayjs";
 
 import env from "@env";
-import storage from "@storage";
-import { NinjaResponseTypeQuote, ResponseTypeQuote } from "@types";
+import { api } from "@storage";
+import { NinjaTypeQuote } from "@types";
 
 const app = new Elysia({
   prefix: "/api",
 }).get(
   "/love",
   async () => {
-    type SaveData = {
-      data: Static<typeof NinjaResponseTypeQuote>[];
-      createAt: Date;
-    };
-    let item = await storage.getItem<SaveData>("api:love");
+    let item = await api.love.get();
     if (
       item !== null &&
       dayjs().diff(dayjs(item.createAt), "minute", true) > 1
@@ -35,12 +31,12 @@ const app = new Elysia({
           .then((response) => {
             return response.json();
           })
-          .then((data: Static<typeof NinjaResponseTypeQuote>[]) => {
+          .then((data: Static<typeof NinjaTypeQuote>[]) => {
             return data;
           }),
         createAt: dayjs().toDate(),
       };
-      storage.setItem("api:love", item);
+      api.love.set(item);
     }
 
     return {
@@ -50,7 +46,7 @@ const app = new Elysia({
     };
   },
   {
-    response: ResponseTypeQuote,
+    response: NinjaTypeQuote,
   },
 );
 

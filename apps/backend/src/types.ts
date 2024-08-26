@@ -1,17 +1,12 @@
-import { t } from "elysia";
+import { Static, t } from "elysia";
 
-// API Ninja Types
-
-export const NinjaResponseTypeQuote = t.Object({
+export const NinjaTypeQuote = t.Object({
   quote: t.String(),
   author: t.String(),
   category: t.String(),
 });
 
-// My Types
-
-export const ResponseTypeQuote = t.Object({
-  quote: t.String(),
-  author: t.String(),
-  category: t.String(),
-});
+export type SaveData = {
+  data: Static<typeof NinjaTypeQuote>[];
+  createAt: Date;
+};
