@@ -14,12 +14,12 @@ backend
 ```bash
 NINJAS_API_KEY= # your api_key from api ninjas
 NODE_ENV= development | production # optional set to production will disabled swagger
-PORT= # optional default is 8888
+PORT= 8888 # optional
 ```
 
 frontend
 ```bash
-VITE_BACKEND_BASE_URL= http://localhost:8888 # example
+VITE_BACKEND_BASE_URL= http://localhost:8888 # your backend base url
 ```
 
 ### My thoughts on ElysiaJS
