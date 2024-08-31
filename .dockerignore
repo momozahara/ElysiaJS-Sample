@@ -1,0 +1,8 @@
+.git
+.github
+.turbo
+.env
+.vscode
+
+dist
+node_modules
