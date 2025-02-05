@@ -9,7 +9,7 @@ import { NinjaTypeQuote } from "@types";
 const app = new Elysia({
   prefix: "/api",
 }).get(
-  "/love",
+  "/quotes",
   async () => {
     let item = await api.love.get();
     if (
@@ -20,14 +20,11 @@ const app = new Elysia({
     }
     if (item === null) {
       item = {
-        data: await fetch(
-          "https://api.api-ninjas.com/v1/quotes?category=love",
-          {
-            headers: {
-              "X-Api-Key": env.NINJAS_API_KEY,
-            },
+        data: await fetch("https://api.api-ninjas.com/v1/quotes", {
+          headers: {
+            "X-Api-Key": env.NINJAS_API_KEY,
           },
-        )
+        })
           .then((response) => {
             return response.json();
           })

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
 
-const LoveComponent = defineAsyncComponent(
-  () => import("./components/LoveComponent.vue"),
+const QuoteComponent = defineAsyncComponent(
+  () => import("./components/QuoteComponent.vue"),
 );
 </script>
 
@@ -10,7 +10,7 @@ const LoveComponent = defineAsyncComponent(
   <main>
     <div id="container">
       <Suspense>
-        <component :is="LoveComponent" />
+        <component :is="QuoteComponent" />
         <template #fallback>Loading...</template>
       </Suspense>
     </div>

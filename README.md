@@ -6,6 +6,8 @@ this is a sample of how to use [elysia](https://github.com/elysiajs/elysia) and 
 
 this project will get random quotes from [API NINJAS](https://api-ninjas.com) and display it on frontend, simple isn't it?
 
+for ~~fuck~~ sake they just make category a premium only feature!!!
+
 #### Setup
 
 to run this project you are required to set the following environment for each project inside [apps](/apps) folder then run command `bun run dev` then visit `http://localhost:3000`

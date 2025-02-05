@@ -4,14 +4,14 @@ import type { Application } from "backend/server";
 
 const app = treaty<Application>(import.meta.env.VITE_BACKEND_BASE_URL);
 
-const apiLove = await app.api.love.get();
+const quote = await app.api.quotes.get();
 </script>
 
 <template>
   <p>
-    <span class="quote">{{ apiLove.data.quote }}</span>
+    <span class="quote">{{ quote.data.quote }}</span>
     <span class="sperator" />
-    <span class="author">- {{ apiLove.data.author }}</span>
+    <span class="author">- {{ quote.data.author }}</span>
   </p>
 </template>
 
